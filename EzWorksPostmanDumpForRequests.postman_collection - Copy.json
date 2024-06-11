@@ -1,0 +1,34 @@
+{
+  "info": {
+    "_postman_id": "4db8959e-97ef-4cd3-9221-abd2ce1188b7",
+    "name": "EzWorks PostmanDump for requests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27034486"
+  },
+  "item": [
+    {
+      "name": "http://34.225.132.160:8002/api",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n  {\r\n    \"name\": \"Empty Form Submission\",\r\n    \"request\": {\r\n      \"method\": \"POST\",\r\n      \"url\": \"http://34.225.132.160:8002/api\",\r\n      \"header\": {\r\n        \"Content-Type\": \"application/json\"\r\n      },\r\n      \"body\": {\r\n        \"mode\": \"raw\",\r\n        \"raw\": \"{}\"\r\n      }\r\n    },\r\n    \"response\": {\r\n      \"status\": 422,\r\n      \"body\": {\r\n        \"error\": \"Email is required\"\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"name\": \"Invalid Email\",\r\n    \"request\": {\r\n      \"method\": \"POST\",\r\n      \"url\": \"http://34.225.132.160:8002/api\",\r\n      \"header\": {\r\n        \"Content-Type\": \"application/json\"\r\n      },\r\n      \"body\": {\r\n        \"mode\": \"raw\",\r\n        \"raw\": \"{ \\\"email\\\": \\\"bhavya@ez.works\\\" }\"\r\n      }\r\n    },\r\n    \"response\": {\r\n      \"status\": 422,\r\n      \"body\": {\r\n        \"error\": \"Invalid email format\"\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"name\": \"Valid Email\",\r\n    \"request\": {\r\n      \"method\": \"POST\",\r\n      \"url\": \"http://34.225.132.160:8002/api\",\r\n      \"header\": {\r\n        \"Content-Type\": \"application/json\"\r\n      },\r\n      \"body\": {\r\n        \"mode\": \"raw\",\r\n        \"raw\": \"{ \\\"email\\\": \\\"bhavya@abc.com\\\" }\"\r\n      }\r\n    },\r\n    \"response\": {\r\n      \"status\": 200,\r\n      \"body\": {\r\n        \"message\": \"Form Submitted\"\r\n      }\r\n    }\r\n  }\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.225.132.160:8002/api",
+          "protocol": "http",
+          "host": ["34", "225", "132", "160"],
+          "port": "8002",
+          "path": ["api"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
